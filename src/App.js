@@ -30,9 +30,7 @@ function App() {
       <Divider>Food List</Divider>
 
       <Row style={{ width: '100%', justifyContent: 'center' }}>
-        {allFoods.length === 0 ?
-          <Col><p>Ooops! There is no more content to show!</p></Col> :
-          allFoods
+        { allFoods
             .filter(food => 
               food.name.toLowerCase().includes(search.toLowerCase())
             )
